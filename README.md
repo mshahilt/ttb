@@ -1,8 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tourists Travel Bureau – Next.js Project
 
-## Getting Started
+Welcome to the **Tourists Travel Bureau** web application. This project is built with [Next.js](https://nextjs.org), optimized for performance and deployed live at:
 
-First, run the development server:
+🔗 **Live URL:** [https://ttb.trovup.online](https://ttb.trovup.online)
+
+---
+
+## 🚀 Getting Started
+
+To set up the project locally, follow the instructions below.
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/mshahilt/ttb.git
+cd ttb
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+# or
+yarn
+# or
+pnpm install
+```
+
+### 3. Run Development Server
 
 ```bash
 npm run dev
@@ -14,23 +39,39 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the app in your browser. The page updates automatically as you edit the source files.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Deployment
 
-## Learn More
+This project is deployed using **Nginx configured on an AWS EC2 instance**.
 
-To learn more about Next.js, take a look at the following resources:
+> **Live URL:** [https://ttb.trovup.online](https://ttb.trovup.online)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### To Deploy:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Build the project:
 
-## Deploy on Vercel
+   ```bash
+   npm run build
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Start the production server:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npm start
+   ```
+
+3. Configure your domain with **Nginx** and point it to your Next.js app (typically on port `3000`).
+
+4. Ensure your **EC2 security group** allows HTTP/HTTPS traffic and your **Nginx config** includes a reverse proxy to port `3000`.
+
+---
+
+## 📚 Learn More
+
+* [Next.js Documentation](https://nextjs.org/docs)
+* [Learn Next.js Tutorial](https://nextjs.org/learn)
+* [Vercel Deployment Guide](https://nextjs.org/docs/app/building-your-application/deploying)
+
+---
